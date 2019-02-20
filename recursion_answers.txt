@@ -1,0 +1,52 @@
+1. Define and compare recursion and iteration.
+
+Recursion is a technique where a function calls itself with its parameters incrementing towards one of the base cases set. Iteration is a technique where a loop is used to repeat a process.
+Recursion is generally a more expensive task in comparison to iteration as recursion takes up stack space while iteration does not. Ultimately, recursion is a process that is always applied to a function while iteration is applied to a set of instructions which we want repeated.
+
+2. Name five algorithms that are commonly implemented by recursion.
+
+Binary search, Greatest common divisor, factorial, Towers of Hanoi, Filesystem traversal (similar to tree traversal so concepts in that apply)
+
+3. When should you use recursion, and when should you avoid recursion? Give examples for each.
+
+Recursion has a cost in stack space while also having a minor time cost as each stack frame needs to be set up and destroyed. If you had a problem that required an extremely large amount of loops/recursions, this could eventually cause your PC to run out of stack space which would cause the program to crash due to a stack overflow.
+On the other hand, recursion does generally reduce the size of code to make it look more neat. If you had an extremely long document utilizing only iteration, it might be useful to change some of that to recursion to reduce the size of the file and reduce its length.
+
+4. Compare the recursive and iterative solutions to the three algorithms from the checkpoint (factorial, maximum, and fibonacci). What is similar, and what is different?
+
+For the factorial solutions, both are similar in that they both make sure that the number never goes below 0. After that, however, the solutions diverge a bit with recursion beginning to call itself again with different parameters and iteration beginning to iterate through a for statement.
+For the maximum solutions, both are similar in that they both set the currentMaximum to the first number in the array. The difference starts where the recursive solution begins calling itself while the iterative solution utilizes a for statement with a nested if condition to find the solution.
+What is somewhat similar again is how the recursive solution compares the possibleMaximum to the remainingMaximum and the iterative one compares the current number to the currentMaximum. This is similar in that both are doing similar processes.
+For the fibonacci solutions, both are similar in that both solutions end up setting two separate internal variables to compare. Both also add the two resulting returns together to create a new variable.
+Where they differ is, once again, in how the recursive solution has a base solution while the iterative one does not entirely require one (it could use one for returning error if the number < 0).
+
+5. Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, write a recursive algorithm to count the number of items in the entire collection.
+
+function dimensional(array) {
+  let count = 0;
+  for ( let i = 0 ; i < array.length ; i++ ) {
+    if ( typeof array[i] === "object" ) {
+      count += dimensional(array[i]);
+    } else {
+      count ++;
+    }
+  }
+  return count;
+}
+
+6. A palindrome is a word or phrase whose spelling is the same either direction (e.g., racecar). Write a recursive algorithm to determine if a given word or phrase is a palindrome.
+
+function palindrome(string) {
+  if ( string.length < 0 ) {
+    return null;
+  } else if ( string.length == 0 ) {
+    return true;
+  } else if ( string[0] !== string[string.length - 1] ){
+    return false;
+  }
+  return palindrome(string.slice(1, string.length - 1));
+}
+
+7. Google Easter Egg: Google the term "recursion". Google will prompt you with "Did you mean: recursion". Explain why this behavior exhibits properties of recursion.
+
+This behavior exhibits properties of recursion because in recursion, the function is calling itself. Since you are searching for the term recursion in the search engine, it's fitting that it would return itself as a search option. In this way, by searching recursion you can then proceed to search recursion again, which is essentially how recursion works in a function.
