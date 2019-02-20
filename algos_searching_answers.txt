@@ -1,0 +1,55 @@
+1. What is a real-life scenario that uses linear search?
+
+Ctrl + F in the web browser
+
+2. What is a real-life scenario that uses binary search?
+
+Windows files search
+
+3. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+7
+
+4. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+3
+
+5. Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+Linear because the collection is unsorted and binary does not work with unsorted
+
+6. Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+Binary because instead of iterating through each and every item, it would be able to eliminate large chunks of the collection and drastically cut down on time and CPU usage.
+
+PROGRAMMING ASSIGNMENT
+
+1. You and a friend have set a wager to see who can find the word "Albatross" in the dictionary the fastest. Write a program to allow you to win the bet.
+
+function findWord(array, string) {
+  let high = array.length - 1;
+  let low = 0;
+
+  while ( low <= high ) {
+    let mid = Math.floor( (high + low) / 2 );
+    if ( array[mid] == string ) {
+      return mid;
+    } else if ( array[mid] < string ) {
+      let low = mid + 1;
+    } else {
+      let high = mid - 1;
+    }
+  }
+  return null;
+}
+
+2. You work at a pet store, and a child has asked you to net the only white-spotted goldfish from the fish tank. Write a program that will help you net the right fish.
+
+function findFish(array, target) {
+  for ( let i = 0 ; i < array.length ; i++ ) {
+    if ( array[i] === target ) {
+      return i;
+    }
+  }
+  return null;
+}
