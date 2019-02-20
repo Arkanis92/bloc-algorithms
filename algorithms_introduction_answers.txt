@@ -1,0 +1,47 @@
+1. Using proper pseudo-code, describe the following primitive algorithms:
+  1a. Making coffee
+
+  Bring water to a boil
+  Grind beans to same consistency
+  Put filter in brewer
+  Add ground beans to filter
+  Pour boiling water into the filter
+  Remove filter
+  Drink coffee
+
+  1b. Washing dishes
+
+  Turn on water
+  WHILE there are dirty plates
+    Rinse plates off
+    Add soap to sponge
+    Wipe down plates with sponge
+    Place clean plates in drying rack
+  Turn off water
+
+  1c. Brushing teeth
+
+  Rinse off toothbrush
+  Open toothpaste
+  Squeeze toothpaste onto toothbrush
+  Close toothpaste
+  Put toothbrush in mouth
+  WHILE time is less than 1.5 minutes
+    Brush front of teeth
+  WHILE time is greater than 1.5 minutes but less than 3 minutes
+    Brush behind teeth
+  Spit out toothpaste
+  Rinse off mouth
+  Rinse off toothbrush
+
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+Netflix - Netflix has developed a algorithm that deals with buffering issues when streaming. The algorithm determines the video frame and compacts it to the lowest possible bandwidth without sacrificing quality.
+
+Google - Predictive Text was developed by Google in the 1990s. This algorithm utilizes something called Bayes' Theorem, which essentially predicts the outcome based on prior knowledge. The algorithm tracks what you tend to type and also takes the context of the sentence in the question.
+
+Apple - Siri works off of an algorithm through taking your voice command and turning it into a string. Then it looks through the string with an algorithm to pick up on keywords and phrases to figure out the context of your command. After the context has been found, the algorithm will then determine if the answer can be found in your personal data or in an online service.
+
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+An efficient algorithm should minimize the amount of looping required. This is particularly true for nested loops which increase the big O complexity of the algorithm by O(N^2) times where N is the outer loop. This can exponentially increase the amount of processing power required for the algorithm and an efficient algorithm would attempt to minimize the amount of nested loops.
