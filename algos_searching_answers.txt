@@ -4,7 +4,7 @@ Ctrl + F in the web browser
 
 2. What is a real-life scenario that uses binary search?
 
-Windows files search
+Finding a book in a library
 
 3. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
 
